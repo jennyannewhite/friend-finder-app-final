@@ -3,7 +3,7 @@ var bodyParser = require("body-parser");
 var path = require("path");
 var app = express();
 
-var allFriends = require('../data/data.js');
+var allFriends = require('../app/data/data.js');
 
 module.exports = {
     get: function(req, res) {

@@ -6,8 +6,8 @@ var path = require("path");
 var mysql = require('mysql');
 
 //calling information from a different file
-var api = require('./app/routing/apiRoutes.js');
-var html = require('./app/routing/htmlRoutes.js');
+var api = require('./routing/apiRoutes.js');
+var html = require('./routing/htmlRoutes.js');
 
 
 // Sets up the Express App: This is where we do the routing on the front end
@@ -21,7 +21,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.text());
 app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 
-app.use(express.static(__dirname + '/app/public'));
+app.use(express.static(__dirname + '/public'));
 app.use(express.static(__dirname + '/app/data'));
 app.use(express.static(__dirname + '/app/routing'));
 app.use(express.static(__dirname + '/node_modules'));
